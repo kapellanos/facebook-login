@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Facebook_Login" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,8 +15,103 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wA1-M6-dbQ" customClass="FBLoginView">
+                                <rect key="frame" x="165" y="279" width="271" height="43"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="271" id="DgS-W5-6Av"/>
+                                    <constraint firstAttribute="height" constant="43" id="YM3-kF-1yn"/>
+                                </constraints>
+                            </view>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Cr-xE-i5t">
+                                <rect key="frame" x="20" y="30" width="560" height="21"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QQB-Ho-RZa">
+                                <rect key="frame" x="20" y="59" width="560" height="21"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2m2-TY-ZLI">
+                                <rect key="frame" x="20" y="88" width="560" height="21"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gzi-cO-GbY">
+                                <rect key="frame" x="262" y="550" width="76" height="30"/>
+                                <state key="normal" title="Get friends">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapBtnGetFriends:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yrG-xw-aeR"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fCL-wS-Vre">
+                                <rect key="frame" x="20" y="329" width="560" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="82M-KW-Z17"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HxU-jH-P2s">
+                                <rect key="frame" x="165" y="234" width="271" height="37"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="entra con facebook" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WhI-j8-Hpi">
+                                        <rect key="frame" x="67" y="10" width="137" height="18"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.23921568630000001" green="0.36470588240000001" blue="0.58823529409999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="WhI-j8-Hpi" firstAttribute="centerX" secondItem="HxU-jH-P2s" secondAttribute="centerX" id="D9y-8B-e9P"/>
+                                    <constraint firstAttribute="centerY" secondItem="WhI-j8-Hpi" secondAttribute="centerY" id="poV-4i-Xoh"/>
+                                    <constraint firstAttribute="height" constant="37" id="skX-VS-uep"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2m2-TY-ZLI" firstAttribute="leading" secondItem="fCL-wS-Vre" secondAttribute="leading" id="3eN-2x-Uwd"/>
+                            <constraint firstItem="QQB-Ho-RZa" firstAttribute="top" secondItem="9Cr-xE-i5t" secondAttribute="bottom" constant="8" id="5fd-08-Yu9"/>
+                            <constraint firstItem="2m2-TY-ZLI" firstAttribute="trailing" secondItem="QQB-Ho-RZa" secondAttribute="trailing" id="61E-g7-D67"/>
+                            <constraint firstItem="2m2-TY-ZLI" firstAttribute="top" secondItem="QQB-Ho-RZa" secondAttribute="bottom" constant="8" id="63g-3o-mnv"/>
+                            <constraint firstItem="wA1-M6-dbQ" firstAttribute="trailing" secondItem="HxU-jH-P2s" secondAttribute="trailing" id="APb-9Z-5WI"/>
+                            <constraint firstItem="2m2-TY-ZLI" firstAttribute="leading" secondItem="9Cr-xE-i5t" secondAttribute="leading" id="GEC-PI-oec"/>
+                            <constraint firstItem="fCL-wS-Vre" firstAttribute="top" secondItem="wA1-M6-dbQ" secondAttribute="bottom" constant="7" id="Gz1-ia-fVx"/>
+                            <constraint firstItem="9Cr-xE-i5t" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="MU5-cq-289"/>
+                            <constraint firstItem="2m2-TY-ZLI" firstAttribute="trailing" secondItem="9Cr-xE-i5t" secondAttribute="trailing" id="NWL-9l-utd"/>
+                            <constraint firstItem="wA1-M6-dbQ" firstAttribute="leading" secondItem="HxU-jH-P2s" secondAttribute="leading" id="Nai-1L-OWH"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gzi-cO-GbY" secondAttribute="bottom" constant="20" id="Sjb-wl-EFQ"/>
+                            <constraint firstAttribute="centerY" secondItem="wA1-M6-dbQ" secondAttribute="centerY" id="aAI-Cx-tjW"/>
+                            <constraint firstItem="2m2-TY-ZLI" firstAttribute="trailing" secondItem="fCL-wS-Vre" secondAttribute="trailing" id="bok-7D-f2t"/>
+                            <constraint firstItem="wA1-M6-dbQ" firstAttribute="top" secondItem="HxU-jH-P2s" secondAttribute="bottom" constant="8" symbolic="YES" id="fpr-As-6YA"/>
+                            <constraint firstAttribute="centerX" secondItem="gzi-cO-GbY" secondAttribute="centerX" id="hqt-YX-rfE"/>
+                            <constraint firstAttribute="trailing" secondItem="9Cr-xE-i5t" secondAttribute="trailing" constant="20" id="joW-96-4zg"/>
+                            <constraint firstAttribute="centerX" secondItem="wA1-M6-dbQ" secondAttribute="centerX" id="kxM-Og-2sK"/>
+                            <constraint firstItem="2m2-TY-ZLI" firstAttribute="leading" secondItem="QQB-Ho-RZa" secondAttribute="leading" id="oB1-9e-Fkp"/>
+                            <constraint firstItem="9Cr-xE-i5t" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="zwd-Om-HDT"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="lblBirthday" destination="QQB-Ho-RZa" id="L1k-K4-h24"/>
+                        <outlet property="lblFriends" destination="fCL-wS-Vre" id="dXb-JL-K6c"/>
+                        <outlet property="lblLocation" destination="2m2-TY-ZLI" id="PK2-P8-cBi"/>
+                        <outlet property="lblName" destination="9Cr-xE-i5t" id="Lrd-VV-gWW"/>
+                        <outlet property="viewFbLogin" destination="wA1-M6-dbQ" id="6el-if-YUE"/>
+                        <outlet property="viewLoginFacebook" destination="HxU-jH-P2s" id="39u-tj-lyE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
